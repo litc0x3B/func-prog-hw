@@ -13,12 +13,12 @@ $I = \lambda x.x$
 $f = \lambda x.3 + x^3$
 
 ### 3) Восстановите скобки в выражении (аргумент в скобки брать не нужно!):
-1. $y \; z \; x \equiv ((y \; z) \; x)$
-2. $y \; (z \; x) \; x \; (x \; z) \equiv (((y \; (z \; x)) \; x) \; (x \; z))$
-3. $(y \; (z \; x) \; x \; y) \; z \; (x \; x) \equiv (((((y \; (z \; x)) \; x) \; y) \; z) \; (x \; x))$
+1. $y ~ z ~ x \equiv ((y ~ z) ~ x)$
+2. $y ~ (z ~ x) ~ x ~ (x ~ z) \equiv (((y ~ (z ~ x)) ~ x) ~ (x ~ z))$
+3. $(y ~ (z ~ x) ~ x ~ y) ~ z ~ (x ~ x) \equiv (((((y ~ (z ~ x)) ~ x) ~ y) ~ z) ~ (x ~ x))$
 
 ### 4) Опустите лишние скобки:
-$(x \; (y \; z) \; y \; z) \; ((z \; y) \; ((x \; x) \; y \; z)) \; y \equiv x \; (y \; z) \; y \; z \; (z \; y \; (x \; x \; y \; z)) \; y$
+$(x ~ (y ~ z) ~ y ~ z) ~ ((z ~ y) ~ ((x ~ x) ~ y ~ z)) ~ y \equiv x ~ (y ~ z) ~ y ~ z ~ (z ~ y ~ (x ~ x ~ y ~ z)) ~ y$
 
 
 ### 5) Запишите постулат α
@@ -36,16 +36,16 @@ $(x \; (y \; z) \; y \; z) \; ((z \; y) \; ((x \; x) \; y \; z)) \; y \equiv x \
 6. $(\lambda xy.xyx)MN = N M N$
 7. $f(4)$, где $f(x) = x^2 + 2$ \
 $4^2 + 2 = 18$.
-8. $g \; 4 \; 3$, где $g = \lambda yx.x * 3 + ((\lambda x.1 + x^3)y)$\
-$g \; 4 \; 3 = 3 * 3 + ((\lambda x.1 + x^3)4) = 9 + 1 + 4^3 = 74$.
+8. $g ~ 4 ~ 3$, где $g = \lambda yx.x * 3 + ((\lambda x.1 + x^3)y)$\
+$g ~ 4 ~ 3 = 3 * 3 + ((\lambda x.1 + x^3)4) = 9 + 1 + 4^3 = 74$.
 ### 8) Ответьте на вопрос:
-1. Пусть $K \; x \; y = x$, чему равно $K$?\
+1. Пусть $K ~ x ~ y = x$, чему равно $K$?\
 $K = \lambda xy.x$
 
-2. Пусть $S \; x \; y \; z = x \; z \; (y \; z)$, чему равно $S$?\
+2. Пусть $S ~ x ~ y ~ z = x ~ z ~ (y ~ z)$, чему равно $S$?\
 $S = \lambda xyz.xz(yz)$
 
-3. Пусть $((\circ \; f) \; g)x = f(g(x))$, чему равно $\circ$?\
+3. Пусть $((\circ ~ f) ~ g)x = f(g(x))$, чему равно $\circ$?\
 $\circ = \lambda fgx.f(gx)$
 
 ### 9) Определите множество свободных и множество связанных переменных ($FV(M)$ и $BV(M)$) для терма:
@@ -67,7 +67,7 @@ $FV(\lambda y.x + y) = \lbrace x\rbrace$, $BV(\lambda y.x + y) = \lbrace y\rbrac
 6. $(\lambda xy.x + y)y$\
 $FV((\lambda xy.x + y)y) = \lbrace y\rbrace$, $BV = \lbrace x, y\rbrace$.
 
-7. $(\lambda y.x + y) \; 4 * ((\lambda y.y^x - (\lambda z.z)z) \; 2)$\
+7. $(\lambda y.x + y) ~ 4 * ((\lambda y.y^x - (\lambda z.z)z) ~ 2)$\
 $FV = \lbrace x, z\rbrace$, $BV = \lbrace y, z\rbrace$.
 
 ### 10) Определите функцию:
