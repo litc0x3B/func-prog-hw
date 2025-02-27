@@ -1,5 +1,5 @@
-### 1) Дайте определение объекта в λ-исчислении.
-Пусть есть изначально заданный набор переменных $v = \{x, y, z, \dots\}$ \
+### 1) Дайте определение объекта в $\lambda$-исчислении.
+Пусть есть изначально заданный набор переменных $v = \lbrace x, y, z, \dots\rbrace$ \
 Тогда объекты (λ-термы) — это:
 - Переменные: $x \in v$
 - Абстракции: $\lambda x.M$ (где $M$ — терм, $x$ — переменная)
@@ -50,37 +50,37 @@ $\circ = \lambda fgx.f(gx)$
 
 ### 9) Определите множество свободных и множество связанных переменных ($FV(M)$ и $BV(M)$) для терма:
 1. $x$\
-$FV(x) = \{x\}$, $BV(x) = \emptyset$.
+$FV(x) = \lbrace x\rbrace$, $BV(x) = \emptyset$.
 
 2. $4 + 5$\
 $FV(4 + 5) = \emptyset$, $BV(4 + 5) = \emptyset$.
 
 3. $\lambda z.z$\
-$FV(\lambda z.z) = \emptyset$, $BV(\lambda z.z) = \{z\}$.
+$FV(\lambda z.z) = \emptyset$, $BV(\lambda z.z) = \lbrace z\rbrace$.
 
 4. $\lambda y.z$\
-$FV(\lambda y.z) = \{z\}$, $BV(\lambda y.z) = \{y\}$.
+$FV(\lambda y.z) = \lbrace z\rbrace$, $BV(\lambda y.z) = \lbrace y\rbrace$.
 
 5. $\lambda y.x + y$\
-$FV(\lambda y.x + y) = \{x\}$, $BV(\lambda y.x + y) = \{y\}$.
+$FV(\lambda y.x + y) = \lbrace x\rbrace$, $BV(\lambda y.x + y) = \lbrace y\rbrace$.
 
 6. $(\lambda xy.x + y)y$\
-$FV((\lambda xy.x + y)y) = \{y\}$, $BV = \{x, y\}$.
+$FV((\lambda xy.x + y)y) = \lbrace y\rbrace$, $BV = \lbrace x, y\rbrace$.
 
 7. $(\lambda y.x + y) \; 4 * ((\lambda y.y^x - (\lambda z.z)z) \; 2)$\
-$FV = \{x, z\}$, $BV = \{y, z\}$.
+$FV = \lbrace x, z\rbrace$, $BV = \lbrace y, z\rbrace$.
 
 ### 10) Определите функцию:
 1. $FV(M)$\
 Рекурсивно:  
-   - $FV(x) = \{x\}$  
-   - $FV(\lambda x.M) = FV(M) \setminus \{x\}$  
+   - $FV(x) = \lbrace x\rbrace$  
+   - $FV(\lambda x.M) = FV(M) \setminus \lbrace x\rbrace$  
    - $FV(MN) = FV(M) \cup FV(N)$
 
 2. $BV(M)$\
 Рекурсивно:  
    - $BV(x) = \emptyset$  
-   - $BV(\lambda x.M) = \{x\} \cup BV(M)$  
+   - $BV(\lambda x.M) = \lbrace x\rbrace \cup BV(M)$  
    - $BV(MN) = BV(M) \cup BV(N)$
 
 3. $V(M)$\
