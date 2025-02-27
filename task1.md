@@ -90,5 +90,5 @@ $V(M) = FV(M) \cup BV(M)$.
 Рекурсивно:  
 - $[x \mapsto N]x = N$  
 - $[x \mapsto N]y = y$, если $x \neq y$  
-- $[x \mapsto N](\lambda y.M) = \lambda y.[x \mapsto N]M$, если $y \neq x$ и $y \notin FV(N)$ (α-преобразование, если нужно)  
-- $[x \mapsto N](PQ) = ([x \mapsto N]P)([x \mapsto N]Q)$
+- $[x \mapsto N] (\lambda y.M) = \lambda y.[x \mapsto N]M$, если $y \neq x$ и $y \notin FV(N)$ (α-преобразование, если нужно)  
+- $[x \mapsto N] (PQ) = ([x \mapsto N]P)([x \mapsto N]Q)$
