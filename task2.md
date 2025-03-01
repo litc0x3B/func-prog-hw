@@ -32,19 +32,19 @@ $g = Y ~ (\lambda g.G ~ (Y ~ (\lambda f.F ~ f ~ g)) ~ g)$
 
 ### 5) Предполагая наличие в языке: чисел, $\lambda$-абстракций, условных выражений и логических значений, операций над числами (сложение, умножение, вычитание, сравнение и т.д.), определите функцию fib n, которая вычисляет n-ое число Фибоначчи. Дайте нерекурсивное определение для функции fib.
 Рекурсивное определение:\
-fib = $\lambda$n. if n <= 1 then n else (fib (n - 1)) + (fib (n – 2))\
+fib = λn. if n <= 1 then n else (fib (n - 1)) + (fib (n – 2))\
 Нерекурсивное определение:\
-fib = Y ($\lambda$f n. if n <= 1 then n else (f (n - 1)) + (f (n – 2)))
+fib = Y (λf n. if n <= 1 then n else (f (n - 1)) + (f (n – 2)))
 
 ### 6) Пользуясь полученным на предыдущем шаге определением, вычислите fib 4.
-fib 4 = Y ($\lambda$f n. if n <= 1 then n else (f (n - 1)) + (f (n – 2))) 4 =\
-($\lambda$f n. if n <= 1 then n else (f (n - 1)) + (f (n – 2))) (Y E) 4 =\
+fib 4 = Y (λf n. if n <= 1 then n else (f (n - 1)) + (f (n – 2))) 4 =\
+(λf n. if n <= 1 then n else (f (n - 1)) + (f (n – 2))) (Y E) 4 =\
 if 4 <= 1 then 4 else ((Y E) (4 - 1)) + ((Y E) (4 – 2)) =\
 (Y E) (4 - 1) + (Y E) (4 – 2) =\
-(Y ($\lambda$f n. if n <= 1 then n else (f (n - 1)) + (f (n – 2))) 3) +
-(Y ($\lambda$f n. if n <= 1 then n else (f (n - 1)) + (f (n – 2))) 2) = \
-($\lambda$f n. if n <= 1 then n else (f (n - 1)) + (f (n – 2))) (Y E) 3 +s
-($\lambda$f n. if n <= 1 then n else (f (n - 1)) + (f (n – 2))) (Y E) 2 =\
+(Y (λf n. if n <= 1 then n else (f (n - 1)) + (f (n – 2))) 3) +
+(Y (λf n. if n <= 1 then n else (f (n - 1)) + (f (n – 2))) 2) = \
+(λf n. if n <= 1 then n else (f (n - 1)) + (f (n – 2))) (Y E) 3 +
+(λf n. if n <= 1 then n else (f (n - 1)) + (f (n – 2))) (Y E) 2 =\
 if 3 <= 1 then 3 else ((Y E) (3 - 1)) + ((Y E) (3 – 2)) +
 if 2 <= 1 then 2 else ((Y E) (2 - 1)) + ((Y E) (2 – 2)) =\
 ((Y E) (3 - 1)) + ((Y E) (3 – 2)) + ((Y E) (2 - 1)) + ((Y E) (2 – 2)) = ...\
